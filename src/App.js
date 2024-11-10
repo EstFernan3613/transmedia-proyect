@@ -3,8 +3,12 @@ import Modal from 'react-modal';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.entry';
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.entry'; // Importa el worker desde pdfjs-dist
 import './App.css';
+
+// Configuración del worker para PDF.js
+// Esta configuración establece manualmente el worker desde pdfjs-dist
+Worker.workerSrc = pdfWorker;
 
 const App = () => {
   const [pdfFile, setPdfFile] = useState(null);
@@ -48,11 +52,15 @@ const App = () => {
       >
         <h2>{modalContent.title}</h2>
         <p>{modalContent.description}</p>
-        <Worker workerUrl={pdfWorker}>
-          <div className="pdf-viewer-container">
-            <Viewer fileUrl={pdfFile} />
-          </div>
-        </Worker>
+
+        {pdfFile && (
+          <Worker workerUrl={pdfWorker}>
+            <div className="pdf-viewer-container">
+              <Viewer fileUrl={pdfFile} />
+            </div>
+          </Worker>
+        )}
+
         <button onClick={() => setModalIsOpen(false)} className="close-button">Cerrar</button>
       </Modal>
     </div>

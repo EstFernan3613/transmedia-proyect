@@ -1,4 +1,4 @@
-/* Estructura básica */
+/* Estilos generales */
 body {
   font-family: 'Roboto', Arial, sans-serif;
   background: linear-gradient(120deg, #2b2e4a, #4c4177);
@@ -18,6 +18,7 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
   color: #f4f7fa;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -57,17 +58,52 @@ button:hover {
   transform: translateY(-2px);
 }
 
-.pdf-viewer-container {
-  height: 750px;
-  border: 2px solid #4c4177;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #1c1e2e;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+/* Modal de altura completa */
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background: #1c1e2e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 }
 
-.placeholder-text {
-  font-size: 1.2rem;
-  color: #888;
-  margin-top: 20px;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.pdf-viewer-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #1c1e2e;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* Botón de cierre */
+.close-button {
+  background: #4c4177;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: #36294e;
 }
