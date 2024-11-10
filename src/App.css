@@ -1,67 +1,73 @@
-/* App.css */
-
+/* Estructura básica */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f7fa;
-  color: #333;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #2b2e4a, #4c4177);
+  color: #f4f7fa;
   margin: 0;
-  padding: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
 .app-container {
   text-align: center;
   max-width: 800px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  color: #f4f7fa;
 }
 
 h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
 p {
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #b0b3c4;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   color: #fff;
-  background-color: #007bff;
+  background: #4c4177;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #36294e;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .pdf-viewer-container {
   height: 750px;
-  border: 1px solid #ddd;
+  border: 2px solid #4c4177;
   border-radius: 8px;
   overflow: hidden;
+  background-color: #1c1e2e;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .placeholder-text {
   font-size: 1.2rem;
   color: #888;
+  margin-top: 20px;
 }
