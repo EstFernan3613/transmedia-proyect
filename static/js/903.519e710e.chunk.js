@@ -1,0 +1,1 @@
+(self.webpackChunktransmedia_proyect=self.webpackChunktransmedia_proyect||[]).push([[903],{640:()=>{},618:()=>{},492:()=>{},815:()=>{},671:()=>{},787:()=>{}}]);
