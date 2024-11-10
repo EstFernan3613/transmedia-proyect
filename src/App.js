@@ -3,6 +3,9 @@ import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
+// Importa el Worker de pdfjs-dist para asegurar que el visor funcione correctamente
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.entry';
+
 const App = () => {
   const [pdfFile, setPdfFile] = useState(null);
 
@@ -29,7 +32,7 @@ const App = () => {
       </div>
       
       {pdfFile ? (
-        <Worker workerUrl={`https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js`}>
+        <Worker workerUrl={pdfWorker}>
           <div style={{ height: '750px', border: '1px solid #ccc' }}>
             <Viewer fileUrl={pdfFile} />
           </div>
