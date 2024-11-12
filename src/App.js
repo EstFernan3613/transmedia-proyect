@@ -43,7 +43,7 @@ const App = () => {
 
       <section className="full-image-section">
         <h2>Imagen Destacada del Proyecto</h2>
-        <img src="https://media.discordapp.net/attachments/755129753010438176/1305321327770734632/IMAGEN.jpg?ex=67329ab8&is=67314938&hm=de579b566a41c561ea3b5b820c5d08c7329c55eb24227a9e843b3a5fa49b1cb8&=&format=webp&width=1160&height=662" alt="Imagen Destacada" className="full-image" />
+        <img src="./image.png" alt="Imagen Destacada" className="full-image" />
       </section>
 
       <section className="links-section">
