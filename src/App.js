@@ -32,7 +32,7 @@ const App = () => {
           <iframe 
             width="560" 
             height="315" 
-            src="https://www.youtube.com/embed/ihSIZ2LkU8c" 
+            src="https://www.youtube.com/embed/frLo2yAjMYE" 
             title="YouTube video player" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -43,7 +43,7 @@ const App = () => {
 
       <section className="full-image-section">
         <h2>Imagen Destacada del Proyecto</h2>
-        <img src="./image.png" alt="Imagen Destacada" className="full-image" />
+        <img src={`${process.env.PUBLIC_URL}/image.png`} alt="Imagen Destacada" className="full-image" />
       </section>
 
       <section className="links-section">
@@ -56,7 +56,7 @@ const App = () => {
             Ver Biblia Transmedia
           </a>
           <a href={pdfLinks.comic} target="_blank" rel="noopener noreferrer" className="button">
-            Ver Cómic
+            Ver Cómic - Plataforma Principal
           </a>
         </div>
       </section>
